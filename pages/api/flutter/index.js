@@ -1,11 +1,19 @@
 export default async function handler(req, res) {
   const fetchOptions = {
-    method: "",
-    headers: {},
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Request-Headers": "*",
+      "api-key": process.env.MONGODB_DATA_API_KEY,
+    },
   };
-  const fetchBody = {};
+  const fetchBody = {
+    dataSource: process.env.MONGODB_DATA_SOURCE,
+    database: 'social_butterfly',
+    collection: 'flutters',
+  };
   const baseUrl = `${process.env.MONGODB_DATA_API_URL}/action`;
-
+  
   try {
     switch (req.method) {
       case "GET":

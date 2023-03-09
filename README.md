@@ -4,6 +4,7 @@
 
 ---
 
+
 ## Goal
 
 The goal of this lesson is to deploy our completed project to Vercel.

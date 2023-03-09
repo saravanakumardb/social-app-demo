@@ -13,13 +13,19 @@ export default async function handler(req, res) {
     collection: 'flutters',
   };
   const baseUrl = `${process.env.MONGODB_DATA_API_URL}/action`;
-  
+
   try {
     switch (req.method) {
       case "GET":
-        const readData = await fetch('<url>', '<options>');
+        const readData = await fetch(`${baseUrl}/find`, {
+          ...fetchOptions,
+          body: JSON.stringify({
+            ...fetchBody,
+            sort: { postedAt: -1 },
+          }),
+        });
         const readDataJson = await readData.json();
-        res.status(  ).json(  );
+        res.status(200).json(readDataJson.documents);
         break;
       default:
         res.status(405).end();

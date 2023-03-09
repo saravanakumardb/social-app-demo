@@ -35,7 +35,7 @@ export default withApiAuthRequired(async function handler(req, res) {
                     path: {
                       wildcard: "*",
                     },
-                    // fuzzy: {}
+                    fuzzy: {}
                   },
                 },
               },

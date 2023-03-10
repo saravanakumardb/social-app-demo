@@ -7,6 +7,7 @@ import Flutters from "../components/Flutters/Flutters";
 import CreateFlutter from "../components/Flutters/CreateFlutter";
 import HeaderSearch from "../components/Header/HeaderSearch";
 import Profile from "../components/Profile/Profile";
+import Counter from "../components/Counter/Counter";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,6 +50,7 @@ export default function Home() {
         </>
       )}
       {page === "Profile" && <Profile />}
+      {page === "Counter" && <Counter />}
     </AppShell>
   );
 }

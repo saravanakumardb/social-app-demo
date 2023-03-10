@@ -1,10 +1,11 @@
 import { Navbar as NavbarMT, createStyles } from "@mantine/core";
-import { Home, User, Clock2 } from "tabler-icons-react";
+import { Home, User, Clock, Calculator } from "tabler-icons-react";
 import UserButton from "../UserButton/UserButton";
 
 const linkData = [
   { link: "", label: "Home", icon: Home },
-  { link: "", label: "Counter", icon: Clock2 },
+  { link: "", label: "Counter", icon: Clock },
+  { link: "", label: "Calculator", icon: Calculator },
   { link: "", label: "Profile", icon: User },
 ];
 

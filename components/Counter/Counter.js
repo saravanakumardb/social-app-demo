@@ -3,7 +3,7 @@ const Counter = () => {
 
   return (
     <>
-      <h1>Akshaj's Counter</h1>
+      <h1>Counter</h1>
     </>
   );
 };
